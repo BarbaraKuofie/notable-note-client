@@ -13,23 +13,16 @@ export default (state = [], action ) => {
             return state.filter(note => note.id !== action.noteId);
         
         case "MAKE_HELPFUL":
-   
-        index = state.map(note => {
-            if (note.id === action.noteId){
-                return {
-                    ...note, 
-                    helpful: note.helpful +=1
-                }
-            }
-        })
+    
+            index = state.findIndex(note => note.id === action.note.id)
+                filteredArray = state.filter(note => note.id !== action.note.id)
+            return [...filteredArray, action.note ]
 
         case "MAKE_UNHELPFUL":
         
             index = state.findIndex(note => note.id === action.noteId)
-            note = state[index];
             filteredArray = state.filter(note => note.id !== action.noteId)
-            note.unhelpful += 1
-            return [...state,  ...filteredArray, note ]
+            return [...filteredArray, action.note ]
 
     
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
 .App {
   text-align: center;
   display: flex;
@@ -5,13 +7,31 @@
   text-align: center;
   justify-items: center;
   font-size: 18px;
-  max-width: 500px;
-  min-height: 672px;
-  margin: 0 auto;
+  background-image: url('../images/welcome.jpg');
+
  /*  */
-  color: black
+  color: black;
+
 
 }
+
+@font-face{
+  font-family: 'VeganStyle';
+  src: local('VeganStyle'), url('../fonts/VeganStyle.ttf');
+}
+.pretty {
+  font-family: 'Playfair Display', serif;
+  font-size: 55px;
+  color: grey;
+}
+
+
+.quote {
+  font-family:'Playfair Display', serif; 
+  font-size: 24px;
+  color: black;
+}
+
 h3 {
   color: black;
 }
@@ -55,16 +75,16 @@ h3 {
 }
 input {
   margin: 0 auto;
-  /* background-color: black; */
-  opacity: 50%;
+  background-color: snow;
+  opacity: 80%;
   color: black;
   margin-top: 10px;
   width: 300px;
   height: 59px;
   font-size: 22px;
   margin-bottom: 14px;
-  max-width: 527px;
-  padding: 0 10%;
+  max-width: 827px;
+
 }
 
 
@@ -82,6 +102,7 @@ button {
   color: cyan;
 }
 
-.header {
- color: white;
+.form {
+  max-width: 80%;
+  position: relative;
 }

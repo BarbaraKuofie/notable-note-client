@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { registerSuccess } from '../actions/authAction'
 // import Agent from './Agent';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-const eye = <FontAwesomeIcon icon={faEye} />;
+
+
 
 
 class Signup extends Component {
@@ -45,7 +44,7 @@ class Signup extends Component {
     }
     render () {
         return (
-            <div className='App'>
+            <div >
                 <h3> Register </h3>
                 {this.state.error ? <h3 style={{color: 'red'}}>{this.state.error}</h3> : null}
                 <form onSubmit={this.handleNewUser}>

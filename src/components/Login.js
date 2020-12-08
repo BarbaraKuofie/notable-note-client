@@ -6,7 +6,7 @@ class Login extends Component {
         state = {
             username: '',
             password: '',
-            error: null
+            error: null,
         }
     
     handleChange = event => {
@@ -36,7 +36,7 @@ class Login extends Component {
                 })
             }else {
                 this.props.loginSuccess(user)
-                this.props.history.push('/')
+                this.props.history.push('/home')
                 localStorage.setItem('app_token', user.token )
                 this.setState({
                     username: '',
@@ -48,7 +48,7 @@ class Login extends Component {
     }
     render () {
         return (
-            <div className='App'>
+            <div >
                 <h3> Login </h3>
                 {this.state.error ? <h3 style={{color: 'red'}}>{this.state.error}</h3> : null}
                 <form onSubmit={this.handleLogin}>
@@ -57,7 +57,6 @@ class Login extends Component {
                     </div>
                     <div className='pass-wrapper'>
                          <input placeholder="password" type='password' name={'password'}  value={this.state.password} onChange={this.handleChange}/> 
-                         {/* <i>{eye}</i>   */}
                     </div>
                     <div>
                      <button type="submit"> Submit </button>

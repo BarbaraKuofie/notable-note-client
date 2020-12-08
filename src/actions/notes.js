@@ -35,16 +35,16 @@ export const updateNote = noteId => {
     }
 }
 
-export const makeHelpful = noteId => {
+export const makeHelpful = note => {
     return {
         type: 'MAKE_HELPFUL', 
-        noteId
+        note
     }
 }
 
-export const makeUnhelpful = noteId => {
+export const makeUnhelpful = note => {
     return {
         type: 'MAKE_UNHELPFUL',
-        noteId 
+        note
     }
 }

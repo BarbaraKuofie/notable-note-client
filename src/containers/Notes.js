@@ -25,15 +25,15 @@ class Notes extends Component {
         return (
             <div>
                 <div className="row justify-content-center">
-                   <h2>Notes</h2>  
+        
                 </div>
                 <hr />
                     <div className="container">
                         <div className="row">
                             <div className="col-md-4">
                                 {notes.map(note => <NoteCard  key= {note.id}
-                                viewNote = {viewNote}
-                                updateNote = {updateNote}
+                                // viewNote = {viewNote}
+                                // updateNote = {updateNote}
                                 note = { note }
                                 />)}
                             

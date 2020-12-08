@@ -26,16 +26,16 @@ class Navbar extends Component {
       
         return (
             <div className='ui inverted menu'>
-    
-                <NavLink to='/' className="active item">
-                    <Menu.Item
-                        className='item'
-                        name='home'
-                        active={activeItem === 'home'}
-                        onClick={this.handleItemClick}
-                    />
-                </NavLink>
-                <NavLink to='/notes/new' className="active item">
+             <Menu inverted secondary> 
+                <NavLink to='/home' >
+                   <Menu.Item
+                       className='item'
+                       name='home'
+                       active={activeItem === 'home'}
+                       onClick={this.handleItemClick}
+                   />
+               </NavLink>
+                <NavLink to='/notes/new' >
                     <Menu.Item
                         className='item'
                         name='new note'
@@ -44,18 +44,7 @@ class Navbar extends Component {
                     />
                 </NavLink>
 
-
-
-                <NavLink to='signup' className='active item right'>  
-                     <Menu.Item 
-                        className='item'
-                        name='signup'
-                        active={activeItem === 'signup'}
-                        onClick={this.handleItemClick}
-                    />
-                </NavLink>
-                <Switch>
-                <NavLink to='/login' className='active item' >
+                    <NavLink to='/' >
                     <Menu.Item
                         name='logout'
                         active={activeItem === 'logout'}
@@ -63,16 +52,23 @@ class Navbar extends Component {
                         >
                     </Menu.Item>
                 </NavLink>
-                <NavLink to='login' className='active item '>  
-                     <Menu.Item 
-                        className='item'
-                        name='login'
-                        active={activeItem === 'login'}
-                        onClick={this.handleItemClick}
-                    />
-                </NavLink>
-                </Switch>
-                
+                <NavLink to='signup'>  
+                <Menu.Item 
+                   className='item'
+                   name='signup'
+                   active={activeItem === 'signup'}
+                   onClick={this.handleItemClick}
+               />
+           </NavLink> 
+              <NavLink to='login' >  
+              <Menu.Item 
+                 className='item'
+                 name='login'
+                 active={activeItem === 'login'}
+                 onClick={this.handleItemClick}
+             />
+         </NavLink>
+         </Menu>
             </div>
         )
     }
